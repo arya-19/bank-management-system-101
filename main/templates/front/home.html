@@ -1,0 +1,140 @@
+ {% extends 'front/master.html' %}
+
+ {% load static %}
+ {% load qr_code %}
+
+ {% block headblock %}
+
+ <title>{{site.name}} | Home</title>
+
+ {% endblock %}
+
+ {% block mainblock %}
+
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="d-flex align-items-center">
+    <div class="container position-relative" data-aos="fade-up" data-aos-delay="100">
+      <div class="row justify-content-center">
+        <div class="col-xl-7 col-lg-9 text-center">
+          <h1>One Stop For All Your Banking Needs!</h1>
+          <h2>Apply Online via Bank Online Services</h2>
+        </div>
+      </div>
+
+      <div class="row icon-boxes">
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="200">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-stack-line"></i></div>
+            <h4 class="title"><a href="">5 Reasons To Apply For Medical Loan</a></h4>
+            <p class="description">Emergencies are rare, but they are always unexpected. When you are faced with a tough situation, you may need funds quickly.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="300">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-fingerprint-line"></i></div>
+            <h4 class="title"><a href="">Store Banking Passwords Safely</a></h4>
+            <p class="description">In recent times, both internet and personal banking have caught on quite rapidly, with many people opting to bank online or over the phone.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="400">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-command-line"></i></div>
+            <h4 class="title"><a href="">Save Tax With Mutual Funds</a></h4>
+            <p class="description">Mutual funds, also known as Equity Linked Savings Scheme (ELSS), are great tax-saving instruments under Section 80C of the Income Tax Act, 1961.</p>
+          </div>
+        </div>
+
+        <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0" data-aos="zoom-in" data-aos-delay="500">
+          <div class="icon-box">
+            <div class="icon"><i class="ri-palette-line"></i></div>
+            <h4 class="title"><a href="">Benefits Of Personal Loan To Repay Debt</a></h4>
+            <p class="description">Personal Loans are one of the best products offered by banks. The loan amount is typically sanctioned and disbursed in a just a couple of days.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section><!-- End Hero -->
+
+  <main id="main">
+
+    <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+        <div class="text-center">
+          <h3>Doorstep Banking</h3>
+          <p>Safe and easy cheque and cash pickup & delivery</p>
+          
+          {% qr_from_text "Hello" size=10 border=2 %}
+
+        </div>
+      </div>
+    </section><!-- End Cta Section -->
+
+    <!-- ======= Frequently Asked Questions Section ======= -->
+    <section id="faq" class="faq section-bg">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Get all your doubts answered here!</p>
+        </div>
+
+        <div class="faq-list">
+          <ul>
+            <li data-aos="fade-up">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" class="collapse" href="#faq-list-1">What is investment banking?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-1" class="collapse show" data-parent=".faq-list">
+                <p>
+                  Investment banking manages portfolios of financial assets, commodity and currency, fixed income, corporate finance, corporate advisory services for mergers and acquisitions, debt and equity writing etc.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="100">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-2" class="collapsed">What are the different ways you can operate your accounts?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-2" class="collapse" data-parent=".faq-list">
+                <p>
+                  You can operate your bank accounts in different ways like Internet banking, Telephone or Mobile banking, Branch or Over the counter service, and ATM ( Automated Teller Machine).
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="200">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-3" class="collapsed">What are the things that you have to keep in concern before opening the bank accounts?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-3" class="collapse" data-parent=".faq-list">
+                <p>
+                  Before opening a bank account, if it is a saving account, you have to check the interest rate on the deposit and whether the interest rate remains consistent for the period. If you have the checking account, then look for how many cheques are free to use. Some banks may charge you for using paper cheques or ordering new cheque books. Also, check for different debit card option that is provided on opening an account and online banking features.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="300">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-4" class="collapsed">What is overdraft protection?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-4" class="collapse" data-parent=".faq-list">
+                <p>
+                  Overdraft protection is a service that is provided by a bank to their customer. For instance, if you are holding two accounts, saving and credit account, in the same bank. Now if one of your accounts does not have enough cash to process the cheques, or to cover the purchases. The bank will transfer money from one account to another account, which does not have cash so to prevent check return or to clear your shopping or electricity bills.
+                </p>
+              </div>
+            </li>
+
+            <li data-aos="fade-up" data-aos-delay="400">
+              <i class="bx bx-help-circle icon-help"></i> <a data-toggle="collapse" href="#faq-list-5" class="collapsed">What is ‘Fixed’ APR and ‘Variable’ APR?<i class="bx bx-chevron-down icon-show"></i><i class="bx bx-chevron-up icon-close"></i></a>
+              <div id="faq-list-5" class="collapse" data-parent=".faq-list">
+                <p>
+                  ‘APR’ (Annual Percentage Rate) can be ‘Fixed’ or ‘Variable’ type. In ‘Fixed APR’, the interest rate remains same throughout the term of the loan or mortgage, while in ‘Variable APR’ the interest rate will change without notice, based on the other factors like ‘prime rate’.
+                </p>
+              </div>
+            </li>
+
+          </ul>
+        </div>
+
+      </div>
+    </section><!-- End Frequently Asked Questions Section -->
+
+  </main><!-- End #main -->
+
+ {% endblock %}

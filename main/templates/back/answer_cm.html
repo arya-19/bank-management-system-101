@@ -1,0 +1,63 @@
+{% extends 'back/master.html' %}
+
+{% load static %}
+
+{% block mainblock %}
+
+
+			<!-- Begin Page Content -->
+			<div class="container-fluid">
+
+				<!-- Page Heading -->
+				<h1 class="h3 mb-2 text-gray-800">Answer Comments Page</h1>
+
+				<!-- DataTales Example -->
+				<div class="card shadow mb-4">
+					<div class="card-body">
+						<div class="pt-3">
+							<form class="user" action="{% url 'answer_cm' pk=pk %}" method="POST" enctype="multipart/form-data">
+								{% csrf_token %}
+								<div class="form-group row">
+									<label for="fname" class="col-sm-12 col-lg-2 col-form-label">Answer Here</label>
+									<div class="col-sm-12 col-lg-8">
+										<div class="input-group mb-3">
+											<textarea class="form-control" id="txt" name="txt" placeholder="Answer" rows="3" cols="10" maxlength="100"></textarea>
+										</div>
+									</div>
+								</div>
+								<div class="input-group mb-3" style="justify-content: center;">
+									<input type="submit" value="Submit" class="btn btn-primary btn-md">
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- /.container-fluid -->
+
+{% endblock %}
+
+{% block footerblock %}
+
+<!-- Bootstrap core JavaScript-->
+<script src="{% static 'back/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'back/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{% static 'back/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{% static 'back/js/sb-admin-2.min.js' %}"></script>
+
+<!-- Page level plugins -->
+<script src="{% static 'back/vendor/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'back/vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{% static 'back/js/demo/datatables-demo.js' %}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{% static 'back/js/demo/datatables-demo.js' %}"></script>
+
+{% endblock %}

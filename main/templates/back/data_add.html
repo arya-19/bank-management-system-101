@@ -1,0 +1,101 @@
+{% extends 'back/master.html' %}
+
+{% load static %}
+
+{% block mainblock %}
+
+			<!-- Begin Page Content -->
+			<div class="container-fluid">
+
+				<!-- Page Heading -->
+				<h1 class="h3 mb-2 text-gray-800">Add Data</h1>
+
+				<!-- DataTales Example -->
+				<div class="card shadow mb-4">
+					<div class="card-body">
+						<div class="table-responsive">
+							<!-- Nested Row within Card Body -->
+							<div class="row justify-content-center">
+								<div class="col-lg-6">
+									<div class="p-3">
+										<div class="text-center">
+											<h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+										</div>
+										<form class="user" action="{% url 'data_add' %}" method="POST" enctype="multipart/form-data">
+											{% csrf_token %}
+											<div class="form-group row">
+												<label for="fname" class="col-sm-12 col-lg-2 col-form-label">Name</label>
+												<div class="col-sm-12 col-lg-10">
+													<div class="input-group mb-3">
+														<input type="text" class="form-control" id="name" name="name" placeholder="Name">
+													</div>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="fname" class="col-sm-12 col-lg-2 col-form-label">About</label>
+												<div class="col-sm-12 col-lg-10">
+													<div class="input-group mb-3">
+														<textarea class="form-control" id="about" name="about" placeholder="About" rows="3" cols="10" maxlength="100"></textarea>
+													</div>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="fname" class="col-sm-12 col-lg-2 col-form-label">Fill Color</label>
+												<div class="col-sm-12 col-lg-10">
+													<div class="input-group mb-3">
+														<input type="text" class="form-control" id="fill" name="fill" placeholder="Fill Color">
+													</div>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="fname" class="col-sm-12 col-lg-2 col-form-label">Icon</label>
+												<div class="col-sm-12 col-lg-10">
+													<div class="input-group mb-3">
+														<input type="text" class="form-control" id="icon" name="icon" placeholder="Icon">
+													</div>
+												</div>
+											</div>
+											<div class="form-group row">
+												<label for="sign" class="col-sm-4 col-form-label"></label>
+												<div class="col-sm-4">
+													<div class="input-group mb-3">
+														<input type="submit" value="Submit" class="btn btn-primary btn-block btn-md">
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- /.container-fluid -->
+
+{% endblock %}
+
+{% block footerblock %}
+
+<!-- Bootstrap core JavaScript-->
+<script src="{% static 'back/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'back/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{% static 'back/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{% static 'back/js/sb-admin-2.min.js' %}"></script>
+
+<!-- Page level plugins -->
+<script src="{% static 'back/vendor/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'back/vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{% static 'back/js/demo/datatables-demo.js' %}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{% static 'back/js/demo/datatables-demo.js' %}"></script>
+
+{% endblock %}

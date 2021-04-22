@@ -1,0 +1,90 @@
+{% extends 'front/master.html' %}
+
+{% load static %}
+
+{% block headblock %}
+
+<title>{{site.name}} | About</title>
+
+{% endblock %}
+
+{% block mainblock %}
+
+  <main id="main">
+
+    <br>
+    <!-- ======= About Section ======= -->
+    <section id="about" class="about">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>About Us</h2>
+          <p>Our bank has a banking network of 5,000+ branches and 14,000+ ATMs spread across 3,000+ cities and towns.</p>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <p>
+              We offer a diverse range of financial products and banking services to customers through a growing branch and ATM network and digital channels such as Netbanking, Phonebanking and MobileBanking.
+            </p>
+            <ul>
+              <li><i class="ri-check-double-line"></i> Credit & Travel Card</li>
+              <li><i class="ri-check-double-line"></i> Loan & Insurance</li>
+              <li><i class="ri-check-double-line"></i> Equities & Derivatives</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Under our treasury services, we help businesses generate better returns on their funds and manage financial risk. The bank is among first four companies to subject itself to a GVC rating.
+              <br><br>
+              Get In Touch With Us Today!
+            </p>
+            <a href="#" class="btn-learn-more">Learn More</a>
+          </div>
+        </div>
+
+      </div>
+    </section><!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+    <section id="counts" class="counts section-bg">
+      <div class="container">
+
+        <div class="row justify-content-end">
+
+          <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <span data-toggle="counter-up">65</span>
+              <p>Happy Clients</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <span data-toggle="counter-up">85</span>
+              <p>Projects</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <span data-toggle="counter-up">12</span>
+              <p>Years of experience</p>
+            </div>
+          </div>
+
+          <div class="col-lg-3 col-md-5 col-6 d-md-flex align-items-md-stretch">
+            <div class="count-box">
+              <span data-toggle="counter-up">15</span>
+              <p>Awards</p>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Counts Section -->
+
+  </main><!-- End #main -->
+
+{% endblock %}

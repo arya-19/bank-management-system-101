@@ -1,0 +1,119 @@
+{% extends 'front/master.html' %}
+
+{% load static %}
+
+{% block headblock %}
+
+<title>{{site.name}} | Services</title>
+
+{% endblock %}
+
+ {% block mainblock %}
+
+  <main id="main">
+
+	<br>
+	<!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+		<div class="container" data-aos="fade-up">
+  
+		  <div class="section-title">
+			<h2>Services</h2>
+			<p>In modern times there are many services that are offered by the banks. This is done so that more and more customers are attracted. Although there are some basic services as well which are offered by the banks. Thus, these basic services are common for all banks.</p>
+		  </div>
+  
+		  <div class="row">
+
+			{% for i in data %}
+			<div class="col-lg-4 col-md-6 d-flex align-items-stretch pb-4" data-aos="zoom-in" data-aos-delay="100">
+			  <div class="{{i.fill}}">
+				<div class="icon">
+				  <svg width="100" height="100" viewBox="0 0 600 600" xmlns="http://www.w3.org/2000/svg">
+					<path stroke="none" stroke-width="0" fill="#f5f5f5" d="M300,521.0016835830174C376.1290562159157,517.8887921683347,466.0731472004068,529.7835943286574,510.70327084640275,468.03025145048787C554.3714126377745,407.6079735673963,508.03601936045806,328.9844924480964,491.2728898941984,256.3432110539036C474.5976632858925,184.082847569629,479.9380746630129,96.60480741107993,416.23090153303,58.64404602377083C348.86323505073057,18.502131276798302,261.93793281208167,40.57373210992963,193.5410806939664,78.93577620505333C130.42746243093433,114.334589627462,98.30271207620316,179.96522072025542,76.75703585869454,249.04625023123273C51.97151888228291,328.5150500222984,13.704378332031375,421.85034740162234,66.52175969318436,486.19268352777647C119.04800174914682,550.1803526380478,217.28368757567262,524.383925680826,300,521.0016835830174"></path>
+				  </svg>
+				  <i class="{{i.icon}}"></i>
+				</div>
+				<h4><a href="">{{i.name}}</a></h4>
+				<p>{{i.about}}</p>
+			  </div>
+			</div>
+			{% endfor %}  
+		  </div>
+  
+		</div>
+	  </section><!-- End Sevices Section -->
+
+    <!-- ======= Testimonials Section ======= -->
+    <section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Testimonials</h2>
+          <p>Read and write customer reviews and ratings of our Bank. Get complete information about their mobile, internet or online banking, customer support service, etc.</p>
+        </div>
+
+        <div class="owl-carousel testimonials-carousel">
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              I have taken personal loan directly through this Bank. This loan is still active and the agent shared all the required details about the card process. This loan was availed for my personal use and paying the premium on delay basis. If I pay the premium on delay no extra charges for that.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'front/assets/img/testimonials/testimonials-1.jpg' %}" class="testimonial-img" alt="">
+            <h3>Saul Goodman</h3>
+            <h4>Ceo &amp; Founder</h4>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              Bank account is good and I'm using it for the past 2 months. I have to maintain minimum balance of Rs. 500. Their online banking facility is fast to access. When i visited their branch, the response is excellent. They are not deducting any kind of hidden charges.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'front/assets/img/testimonials/testimonials-2.jpg' %}" class="testimonial-img" alt="">
+            <h3>Sara Wilsson</h3>
+            <h4>Designer</h4>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              I am using this Bank's Saving account for the past 6 to 7 years. I get only message alerts for each and every transaction. There was no drawbacks faced by using this account.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'front/assets/img/testimonials/testimonials-3.jpg' %}" class="testimonial-img" alt="">
+            <h3>Jena Karlis</h3>
+            <h4>Store Owner</h4>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              I had taken Educational loan with the Bank 5 years before. Since my sister has already taken the loan from this bank so I preferred it. Rate of interest was applicable. Their service was average because they took one month to sanctioned the loan and they have not given easily. I had submitted only certificates.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'front/assets/img/testimonials/testimonials-4.jpg' %}" class="testimonial-img" alt="">
+            <h3>Matt Brandon</h3>
+            <h4>Freelancer</h4>
+          </div>
+
+          <div class="testimonial-item">
+            <p>
+              <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+              I opened the savings account from this Bank. Its almost 5 years since i have been using this account. Its a good nationalized bank.
+              <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+            </p>
+            <img src="{% static 'front/assets/img/testimonials/testimonials-5.jpg' %}" class="testimonial-img" alt="">
+            <h3>John Larson</h3>
+            <h4>Entrepreneur</h4>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Testimonials Section -->
+
+  </main><!-- End #main -->
+
+ {% endblock %}

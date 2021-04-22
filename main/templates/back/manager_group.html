@@ -1,0 +1,100 @@
+{% extends 'back/master.html' %}
+
+{% load static %}
+
+{% block mainblock %}
+
+
+			<!-- Begin Page Content -->
+			<div class="container-fluid">
+
+				<!-- Page Heading -->
+				<h1 class="h3 mb-2 text-gray-800">Manager Groups</h1>
+
+				<div class="card shadow mb-4">
+					<div class="card-body">
+						<div class="pt-3">
+							<form class="user" action="{% url 'manager_group_add' %}" method="POST" enctype="multipart/form-data">
+								{% csrf_token %}
+								<div class="form-group row">
+									<label for="fname" class="col-sm-12 col-lg-2 col-form-label">Add Group Here</label>
+									<div class="col-sm-12 col-lg-4">
+										<div class="input-group mb-3">
+											<input type="text" class="form-control" id="name" name="name" required placeholder="Group Name">
+										</div>
+									</div>
+									<div class="col-lg-1"></div>
+									<div class="input-group mb-3 col-sm-12 col-lg-2">
+										<input type="submit" value="Submit" class="btn btn-primary btn-block btn-md">
+									</div>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+
+				<!-- DataTales Example -->
+				<div class="card shadow mb-4">
+					<div class="card-body">
+						<div class="table-responsive">
+							<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+								<thead>
+									<tr>
+										<th>Name</th>
+										<th>Actions</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th>Name</th>
+										<th>Actions</th>
+									</tr>
+								</tfoot>
+								<tbody>
+
+									{% for i in group %}
+									<tr>
+										<td>{{i.name}}</td>
+										<td><a href="#" data-toggle="tooltip" title="Edit" class="btn btn-warning btn-circle btn-sm">
+											<i class="fas fa-exclamation-triangle"></i>
+										</a>
+										<a href="{% url 'manager_group_delete' name=i.name %}" data-toggle="tooltip" title="Delete" class="btn btn-danger btn-circle btn-sm">
+											<i class="fas fa-trash"></i>
+										</a></td>
+									</tr>
+									{% endfor %}
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- /.container-fluid -->
+
+{% endblock %}
+
+{% block footerblock %}
+
+<!-- Bootstrap core JavaScript-->
+<script src="{% static 'back/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'back/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{% static 'back/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{% static 'back/js/sb-admin-2.min.js' %}"></script>
+
+<!-- Page level plugins -->
+<script src="{% static 'back/vendor/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'back/vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{% static 'back/js/demo/datatables-demo.js' %}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{% static 'back/js/demo/datatables-demo.js' %}"></script>
+
+{% endblock %}

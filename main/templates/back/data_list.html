@@ -1,0 +1,90 @@
+{% extends 'back/master.html' %}
+
+{% load static %}
+
+{% block mainblock %}
+
+
+			<!-- Begin Page Content -->
+			<div class="container-fluid">
+
+				<!-- Page Heading -->
+				<h1 class="h3 mb-2 text-gray-800">Data List</h1>
+
+				<!-- DataTales Example -->
+				<div class="card shadow mb-4">
+					<div class="card-body">
+						<div class="table-responsive">
+							<table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+								<thead>
+									<tr>
+										<th>ID</th>
+										<th>Name</th>
+										<th>About</th>
+										<th>Fill Color</th>
+										<th>Icon</th>
+										<th>Actions</th>
+									</tr>
+								</thead>
+								<tfoot>
+									<tr>
+										<th>ID</th>
+										<th>Name</th>
+										<th>About</th>
+										<th>Fill Color</th>
+										<th>Icon</th>
+										<th>Actions</th>
+									</tr>
+								</tfoot>
+								<tbody>
+
+									{% for i in data %}
+									<tr>
+										<td>{{i.pk}}</td>
+										<td>{{i.name}}</td>
+										<td>{{i.about}}</td>
+										<td>{{i.fill}}</td>
+										<td>{{i.icon}}</td>
+										<td><a href="{% url 'data_edit' pk=i.pk %}" data-toggle="tooltip" title="Edit" class="btn btn-warning btn-circle btn-sm">
+											<i class="fas fa-exclamation-triangle"></i>
+										</a>
+										<a href="{% url 'data_delete' pk=i.pk %}" data-toggle="tooltip" title="Delete" class="btn btn-danger btn-circle btn-sm">
+											<i class="fas fa-trash"></i>
+										</a></td>
+									</tr>
+									{% endfor %}
+
+								</tbody>
+							</table>
+						</div>
+					</div>
+				</div>
+
+			</div>
+			<!-- /.container-fluid -->
+
+{% endblock %}
+
+{% block footerblock %}
+
+<!-- Bootstrap core JavaScript-->
+<script src="{% static 'back/vendor/jquery/jquery.min.js' %}"></script>
+<script src="{% static 'back/vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+<!-- Core plugin JavaScript-->
+<script src="{% static 'back/vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+<!-- Custom scripts for all pages-->
+<script src="{% static 'back/js/sb-admin-2.min.js' %}"></script>
+
+<!-- Page level plugins -->
+<script src="{% static 'back/vendor/datatables/jquery.dataTables.min.js' %}"></script>
+<script src="{% static 'back/vendor/datatables/dataTables.bootstrap4.min.js' %}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{% static 'back/js/demo/datatables-demo.js' %}"></script>
+
+<!-- Page level custom scripts -->
+<script src="{% static 'back/js/demo/datatables-demo.js' %}"></script>
+
+{% endblock %}
