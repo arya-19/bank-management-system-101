@@ -1,1 +1,1 @@
-web: gunicorn app_name.wgsi  - -log-file -
+web: gunicorn mybank.wsgi --log-file -

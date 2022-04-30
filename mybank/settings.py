@@ -28,7 +28,8 @@ DEBUG = False
 
 ALLOWED_HOSTS = [
     'localhost',
-    '127.0.0.1'
+    '127.0.0.1',
+    'bank-management-system-101.herokuapp.com',
 ]
 
 
